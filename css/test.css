@@ -1,0 +1,488 @@
+h1 {
+  color: #2c3643;
+  font-family: 'Segoe UI Light';
+  font-size: 32px;
+  margin: 0;
+}
+
+.describe {
+    color: #2c3643;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.txt-gray-light {
+  color: #7e838b;
+}
+
+.txt-navy-blue {
+  color: #2f3458;
+}
+
+.f-size-13 {
+  font-size: 13px;
+}
+
+.mt-d-25 {
+  margin-top: -25px;
+}
+
+.wrap-login100 {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex-direction: row-reverse;
+
+}
+
+.login100-more {
+  width: calc(100% - 575px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.login100-more::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #303459;
+}
+
+.login100-form {
+  width: 575px;
+  min-height: 100vh;
+  display: block;
+  background-color: #fff;
+  padding: 175px 108px 55px 108px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.login-bg-img {
+  margin-top: 9%;
+}
+
+@media (min-width:1025px) and (max-width: 1367px) {
+  .login-bg-img {
+    margin-top: 25%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .login-bg-img {
+    margin-top: 60%;
+  }
+}
+
+.login-desc {
+  font-family: 'Segoe UI Light';
+  font-size: 22px;
+  color: #fff;
+  margin: 0 30px;
+}
+
+@media (max-width: 1024px) {
+  .login-desc {
+    margin: 40px;
+  }
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 35px;
+  background-color: #1e234d;
+}
+
+@media (min-width:1025px) and (max-width: 1367px) {
+  .footer {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    margin-top: 150px;
+  }
+}
+
+.f-div {
+  flex: 1;
+}
+
+.f-inner {
+  margin: 15px 5px;
+  height: 105px;
+  border-right: 2px solid #fff;
+  cursor: pointer;
+  color: #b3b3b3;
+}
+
+.f-inner:hover {
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .f-inner {
+    height: 335px;
+  }
+}
+
+@media (min-width:1025px) and (max-width: 1367px) {
+  .f-inner {
+    height: 218px;
+  }
+}
+
+.f-inner-last {
+  margin: 15px 5px;
+  height: 27%;
+  cursor: pointer;
+  color: #b3b3b3;
+}
+
+.f-inner-last:hover {
+  color: #fff;
+}
+
+.f-head {
+  font-family: 'Segoe UI Semibold';
+  margin: 10px;
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .f-head {
+    height: 45px;
+  }
+}
+
+.f-img-content {
+  font-family: 'Segoe UI Light';
+  display: inline-block;
+  width: 61%;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: left;
+  margin: 0 10px;
+}
+
+@media (max-width: 1024px) {
+  .f-img-content {
+    margin-top: 30px;
+    width: 90%;
+  }
+}
+
+@media (min-width:1025px) and (max-width: 1367px) {
+  .f-img-content {
+    margin-top: 20px;
+    width: 90%;
+  }
+}
+
+.login-icons {
+  filter: invert(0.7);
+  display: inline-block;
+  vertical-align: top;
+  width:60px;
+  height:60px;
+  margin-right:15px;
+}
+
+@media (max-width: 992px) {
+  .login-icons {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .login100-form {
+    width: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .login100-more {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .login100-form {
+    width: 100%;
+  }
+
+  .login100-more {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .login100-form {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 70px;
+  }
+}
+
+/* Sign up form css*/
+
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 26px;
+  width: 100%;
+}
+
+label {
+  font-family: 'Segoe UI Light';
+  font-size: 12px;
+  color: #dadedf;
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+input {
+  font-family: 'Segoe UI Light';
+  font-size: 12px;
+  color: #2c3643;
+  transition: all 0.2s;
+  touch-action: manipulation;
+  caret-color: #2d3645;
+  border: 0;
+  border-bottom: 1px solid #dadedf;
+  -webkit-appearance: none;
+  padding: 2px;
+  letter-spacing: 1px;
+  cursor: text;
+  background-color: transparent;
+  text-shadow: 0px 0px 0px #fff;
+}
+
+#email{
+    font-size:16px;
+}
+
+
+#password {
+  letter-spacing: 8px;
+  font-size:16px;
+}
+
+
+input::-webkit-input-placeholder{
+color: #2c3643;  
+text-shadow: none;
+-webkit-text-fill-color: initial;
+letter-spacing: 1px;
+}
+
+input:focus {
+outline: 0;
+border-bottom: 1px solid #1e234d;
+transition: border-bottom .5s ease-in-out;
+}
+
+input:placeholder-shown + label {
+cursor: text;
+max-width: 66.66%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+transform-origin: left bottom;
+transform: translate(0, 2.125rem) scale(1.5);
+}
+
+::-webkit-input-placeholder {
+opacity: 0;
+transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+opacity: 0.6;
+color:#2c3643	;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+  color: #2c3643;
+  font-family: 'Segoe UI Light';
+  font-size: 12px;
+}
+
+/* Alert text css */
+
+.validate-input {
+  position: relative;
+}
+
+
+.field-icon {
+  color: #dadedf;
+  position: absolute;
+  align-self: flex-end;
+  padding-right: 10px;
+  top:32px;
+}
+
+input:focus ~ .field-icon {
+  color: #2c3643;
+}
+
+/* Forget password css */
+.flex-sb-m {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.error-icon {
+  color: #e60000;
+}
+
+.error-content {
+  color: #e60000;
+  font-size: 12px;
+}
+
+/* Customize the label (the container) */
+.container {
+  font-family: 'Segoe UI Light';
+  color: #7e838b;
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.6;
+  width: 50%;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #7c838b;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 7px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.forget-pass {
+  font-size: 12px;
+  color: #2f3458;
+}
+
+button {
+  border-color: transparent;
+  border-radius: 30px;
+  width:100%;
+  height:44px;
+  background-color: #303459;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e234d;
+}
+
+button:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+#signin p{
+  padding-top:5px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.signin{
+ z-index: 2;
+}
