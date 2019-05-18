@@ -436,7 +436,6 @@ input:focus ~ .field-icon {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 7px;
   top: 2px;
