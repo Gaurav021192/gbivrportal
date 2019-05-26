@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Voice Recorder</title>
+
+        <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" />
+		<link href="./lib/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+        <link href="./css/test.css" rel="stylesheet" />
+		<script type="text/javascript" src="./lib/jquery/jquery-3.4.1.min.js"></script>
+    </head>    
+    <body>
+        <div class="container-fluid m-0 p-0">
+            <div class="wrap-login100">
+				<form class="login100-form validate-form p-0">
+					<ul class="tablist">
+                        <li class="signtab active account"><i class="fas fa-user-circle tabicon"></i>Setup your account</li>
+                        <li class="signtab plan"><i class="fas fa-suitcase tabicon"></i>Choose your Plan</li>
+                    </ul>
+                    <div class="signup">
+                        <div class="accountTab">
+                            <h1>Sign Up</h1>
+                            <div class="row">
+                                <div class="col-12 mt-3">
+                                    <div class="field validate-input">
+                                        <input type="text" class="fname" name="fname" id="fname" placeholder="John">
+                                        <label for="fname">First Name</label>
+                                        <span class="focus-border"></span>
+                                        <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none fname-error"></span>
+                                    </div>
+                                    <p class="error-content mt-d-20 d-none fname-error">First Name is required</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="field validate-input">
+                                        <input type="text" class="lname" name="lname" id="lname" placeholder="Doe">
+                                        <label for="lname">Last Name</label>
+                                        <span class="focus-border"></span>
+                                        <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none lname-error"></span>
+                                    </div>
+                                    <p class="error-content mt-d-20 d-none lname-error">Last Name is required</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="field validate-input">
+                                        <input type="text" class="uname" name="uname" id="uname" placeholder="johndoe">
+                                        <label for="uname">UserName</label>
+                                        <span class="focus-border"></span>
+                                        <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none uname-error"></span>
+                                    </div>
+                                    <p class="error-content mt-d-20 d-none uname-error">UserName is required</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="field validate-input">
+                                        <input type="text" class="email" name="email" id="email" placeholder="johndoe@mail.com">
+                                        <label for="email">Email</label>
+                                        <span class="focus-border"></span>
+                                        <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none email-error"></span>
+                                    </div>
+                                    <p class="error-content mt-d-20 d-none email-error">Valid email is required: abc@email.com</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="field validate-input">
+                                        <input type="text" class="phone" name="phone" id="phone" placeholder="9645XXXXXX">
+                                        <label for="phone">Phone Number</label>
+                                        <span class="focus-border"></span>
+                                        <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none phone-error"></span>
+                                    </div>
+                                    <p class="error-content mt-d-20 d-none phone-error">Phone Number is required</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="field validate-input">
+                                        <input type="text" class="company" name="company" id="company" placeholder="John Corp">
+                                        <label for="company">Comapny Name</label>
+                                        <span class="focus-border"></span>
+                                        <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none comp-error"></span>
+                                    </div>
+                                    <p class="error-content mt-d-20 d-none comp-error">Company Name is required</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="field validate-input" data-validate="Password is required">
+                                        <input type="password" class="password" name="password" id="password" placeholder="* * * * * *">
+                                        <label for="password">Password</label>
+                                        <span class="focus-border"></span>
+                                        <span toggle="#password" class="far fa-lg fa-eye-slash field-icon toggle-password"></span>
+                                        <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none pass-error"></span>
+                                    </div>
+                                    <p class="error-content mt-d-20 d-none pass-error">Password is required</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="field validate-input" data-validate="Password is required">
+                                        <input type="password" class="cpassword" name="cpassword" id="cpassword" placeholder="* * * * * *">
+                                        <label for="cpassword">Confirm Password</label>
+                                        <span class="focus-border"></span>
+                                        <span toggle="#cpassword" class="far fa-lg fa-eye-slash field-icon toggle-con-password"></span>
+                                        <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none cpass-error"></span>
+                                    </div>
+                                    <p class="error-content mt-d-20 d-none cpass-error">Password is required</p>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button id="signin" class="account-btn"><p>Create an account</p></button>
+                            </div>
+                        </div>
+                        <div class="planTab d-none">
+                            <h1>Choose Plan</h1>
+                            <div class="row">
+                                <div class="col-12 mt-4">
+                                    <div class="custom-select">
+                                        <select>
+                                            <option value="0">User Type</option>
+                                            <option value="1">Admin</option>
+                                            <option value="2">Contractor</option>
+                                            <option value="3">Caller</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="field validate-input">
+                                        <input type="text" class="pri" name="pri" id="pri" placeholder="XX">
+                                        <label for="pri">Dedicated PRI(s)</label>
+                                        <span class="focus-border"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="custom-select">
+                                        <select>
+                                            <option value="0">Service Plan</option>
+                                            <option value="1">Silver</option>
+                                            <option value="2">Gold</option>
+                                            <option value="3">Platinum</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button id="signin" class="signup-btn"><p>Submit</p></button>
+                            </div>
+                        </div>                        
+                    </div>
+				</form>
+
+				<div class="login100-more align-center">
+					<div class="login-bg-img"><img src="./bg-img/bg-image.svg" class="img-fluid"/></div>
+					<p class="login-desc">Smart IVR service configured through a Virtual Number interacts with customers and routes calls to appropriate department.</p>
+					<div class="footer">
+						<div class="f-div">
+							<div class="f-inner">
+								<p class="f-head">Best In Class Connectivity</p>
+								<img src="./bg-img/connection.svg" alt="connection" class="login-icons">
+								<p class="f-img-content">Ensuring the lowest latency for the priority traffic allowing you to reach your customers in shortest time</p>
+							</div>
+						</div>
+						<div class="f-div">
+							<div class="f-inner">
+								<p class="f-head">No Setup Fees</p>
+								<img src="./bg-img/money.svg" alt="money" class="login-icons">
+								<p class="f-img-content">Enjoy 100% free setup for Voice and Messaging management solutions</p>
+							</div>
+						</div>
+						<div class="f-div">
+							<div class="f-inner-last">
+								<p class="f-head">Ease Of Use</p>
+								<img src="./bg-img/usability.svg" alt="usability" class="login-icons">
+								<p class="f-img-content">Explore user-friendly web interface, incorporating developer friendly Voice API and Bulk SMS</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="./js/signup.js"></script>
+    </body>
+</html>

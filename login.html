@@ -11,7 +11,7 @@
         <link href="./css/test.css" rel="stylesheet" />
 		<script type="text/javascript" src="./lib/jquery/jquery-3.4.1.min.js"></script>
     </head>    
-    <body style="background-color: #666666;">
+    <body>
         <div class="container-fluid m-0 p-0">
             <div class="wrap-login100">
 				<form class="login100-form validate-form">
@@ -21,16 +21,18 @@
 					<div class="field validate-input" data-validate="Valid email is required: abc@xyz.com">
 						<input type="text" class="input" name="email" id="email" placeholder="example@email.com">
 						<label for="email">Email</label>
+						<span class="focus-border"></span>
 						<span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none email-error"></span>
 					</div>
-					<p class="error-content mt-d-25 d-none email-error">Valid email is required: abc@email.com</p>
+					<p class="error-content mt-d-20 d-none email-error">Valid email is required: abc@email.com</p>
 					<div class="field validate-input" data-validate="Password is required">
-						<input type="password" class="input" name="password" id="password" placeholder="At least 6 characters">
+						<input type="password" class="input" name="password" id="password" placeholder="* * * * * *">
 						<label for="password">Password</label>
-						<span toggle="#password" class="far fa-lg fa-eye field-icon toggle-password"></span>
+						<span class="focus-border"></span>
+						<span toggle="#password" class="far fa-lg fa-eye-slash field-icon toggle-password"></span>
 						<span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none pass-error"></span>
 					</div>
-					<p class="error-content mt-d-25 d-none pass-error">Password is required</p>
+					<p class="error-content mt-d-20 d-none pass-error">Password is required</p>
 					
 					<div class="flex-sb-m w-full mb-4">
 						<label class="container">Remember me
@@ -44,7 +46,7 @@
 			
 					<button id="signin" class="gradient-text"><p>Sign In</p></button>					
 					<p class="text-center txt-gray-light mt-2 f-size-13">Don't have an account?
-						<span><a href="#" class="txt-navy-blue f-size-13">Create your account</a></span>
+						<span><a href="./signup.html" class="txt-navy-blue f-size-13">Create your account</a></span>
 					</dipv>
 				</form>
 

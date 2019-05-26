@@ -23,8 +23,8 @@ h1 {
   font-size: 13px;
 }
 
-.mt-d-25 {
-  margin-top: -25px;
+.mt-d-20 {
+  margin-top: -20px;
 }
 
 .wrap-login100 {
@@ -249,7 +249,7 @@ h1 {
 .field {
   display: flex;
   flex-flow: column-reverse;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -263,7 +263,7 @@ label {
 
 input {
   font-family: 'Segoe UI Light';
-  font-size: 12px;
+  font-size: 16px;
   color: #2c3643;
   transition: all 0.2s;
   touch-action: manipulation;
@@ -278,14 +278,8 @@ input {
   text-shadow: 0px 0px 0px #fff;
 }
 
-#email{
-    font-size:16px;
-}
-
-
-#password {
+#password, #cpassword {
   letter-spacing: 8px;
-  font-size:16px;
 }
 
 
@@ -295,11 +289,24 @@ text-shadow: none;
 -webkit-text-fill-color: initial;
 letter-spacing: 1px;
 }
+.focus-border {
+  position: absolute; 
+  bottom: 0; 
+  left: 50%; 
+  width: 0; 
+  height: 1px; 
+  background-color: #1e234d; 
+  transition: 0.4s;
+}
+
+input:focus ~ .focus-border {
+  width: 100%; 
+  transition: 0.4s; 
+  left: 0;
+}
 
 input:focus {
 outline: 0;
-border-bottom: 1px solid #1e234d;
-transition: border-bottom .5s ease-in-out;
 }
 
 input:placeholder-shown + label {
@@ -476,7 +483,8 @@ a:hover {
   color: red;
 }
 
-#signin p{
+button p {
+  font-family: 'Segoe UI Light';
   padding-top:5px;
   font-size: 18px;
   color: #fff;
@@ -485,3 +493,136 @@ a:hover {
 .signin{
  z-index: 2;
 }
+
+/* ul tablist css*/
+.tablist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.signtab {
+  width: 50%;
+  display: flex;
+  padding: 15px 60px;
+  background-color: #DADEDF;
+  color: #BFBFC1;
+  font-family: 'Segoe UI Light';
+  font-size: 15px;
+}
+
+.active {
+  background-color: #6ECD01;
+  color: #fff;
+}
+
+.tab-active {
+  border-left: 1px solid #fff;
+}
+
+.tabicon {
+  font-size: 23px;
+  margin-right: 10px;
+}
+
+.signup {
+  padding: 20px 90px;
+}
+
+.signup-btn, .account-btn {
+  width: 70%;
+  margin: 20px 0;
+}
+
+/* Dropdown css */
+
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: 'Segoe UI Light';
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #dadedf;
+  color: #DADEDF;
+  background: none;
+}
+
+.custom-select:hover {
+  border-bottom: 1px solid #1e234d;
+}
+
+.custom-select:hover .select-selected {
+  color: #1e234d;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  /* background-color: DodgerBlue; */
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f078";
+  display: inline-block;
+  float: right;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 25px;  
+  color: #DADEDF;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+  font-family: "Font Awesome 5 Free";
+  content: "\f077";
+  display: inline-block;
+  float: right;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #dadedf;
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: 5px 5px 5px #dadedf;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: #1e234d;
+}
+
