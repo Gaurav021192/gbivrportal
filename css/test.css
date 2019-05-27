@@ -354,7 +354,7 @@ input:focus + label {
   position: absolute;
   align-self: flex-end;
   padding-right: 10px;
-  top:32px;
+  top:30px;
 }
 
 input:focus ~ .field-icon {
