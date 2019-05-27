@@ -29,6 +29,7 @@ h1 {
 
 .wrap-login100 {
   width: 100%;
+  min-height: 100vh;
   background: #fff;
   overflow: hidden;
   display: -webkit-box;
@@ -76,18 +77,24 @@ h1 {
 }
 
 .login-bg-img {
-  margin-top: 9%;
+  margin-top: 5%;
 }
 
 @media (min-width:1025px) and (max-width: 1367px) {
-  .login-bg-img {
-    margin-top: 25%;
+  .f-img-content {
+    font-size: 14px !important;
+  }
+  .foot-content-header {
+    font-size: 14px !important;
   }
 }
 
 @media (max-width: 1024px) {
-  .login-bg-img {
-    margin-top: 60%;
+  .f-img-content {
+    font-size: 9px !important;
+  }
+  .foot-content-header {
+    font-size: 10px !important;
   }
 }
 
@@ -105,11 +112,22 @@ h1 {
 }
 
 .footer {
-  display: flex;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 100%;
+  padding: 10px 0;
   margin-top: 35px;
   background-color: #1e234d;
+}
+
+.right-foot {
+  border-left: 1px solid #fff;
+}
+
+.foot-content-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
 }
 
 @media (min-width:1025px) and (max-width: 1367px) {
@@ -177,41 +195,13 @@ h1 {
 
 .f-img-content {
   font-family: 'Segoe UI Light';
-  display: inline-block;
-  width: 61%;
   font-size: 14px;
   line-height: 1.2;
-  text-align: left;
-  margin: 0 10px;
-}
-
-@media (max-width: 1024px) {
-  .f-img-content {
-    margin-top: 30px;
-    width: 90%;
-  }
-}
-
-@media (min-width:1025px) and (max-width: 1367px) {
-  .f-img-content {
-    margin-top: 20px;
-    width: 90%;
-  }
+  color: #fff;
 }
 
 .login-icons {
   filter: invert(0.7);
-  display: inline-block;
-  vertical-align: top;
-  width:60px;
-  height:60px;
-  margin-right:15px;
-}
-
-@media (max-width: 992px) {
-  .login-icons {
-    margin-top: 20px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -223,6 +213,13 @@ h1 {
 
   .login100-more {
     width: 50%;
+  }
+  .signup {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  .signtab {
+    padding: 20px !important;
   }
 }
 
@@ -242,6 +239,13 @@ h1 {
     padding-right: 15px;
     padding-top: 70px;
   }
+  .signup {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .signtab {
+    padding: 15px !important;
+  }
 }
 
 /* Sign up form css*/
@@ -255,7 +259,7 @@ h1 {
 
 label {
   font-family: 'Segoe UI Light';
-  font-size: 12px;
+  font-size: 10px;
   color: #dadedf;
   transition: all 0.2s;
   touch-action: manipulation;
@@ -626,3 +630,79 @@ button p {
   background-color: #1e234d;
 }
 
+.plan-container input{
+  margin:0;padding:0;
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+}
+
+/* .visa{width:100px;
+  height:100px;
+}
+.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);} */
+
+.plan-container input:active +.account-plan{opacity: .9;}
+.plan-container input:checked +.account-plan{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+            border: 2px solid #2196F3;
+}
+
+.account-plan{
+  cursor:pointer;
+  width:100%;
+  height:80px;
+  border: 1px solid #dadedf;
+}
+.account-plan:hover{
+  box-shadow: 2px 2px 5px #dadedf;
+}
+
+.plan-content {
+  margin: 0;
+}
+
+.price {
+  padding: 10px;
+}
+
+.small {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.price span, .price sup {
+  font-weight: 900;
+}
+
+.price .price-val {
+  font-size: 40px;
+}
+
+.price sup {
+  font-size: 30px;
+}
+
+.price .month {
+  font-size: 15px;
+}
+
+.vline-space {
+  max-width: 1px;
+}
+
+.vline {
+  border-left: 1px solid #dadedf;
+  height: 100%;
+}
+
+.green {
+  color: #6ECD01;
+  margin-right: 5px;
+}
+
+.plan-val {
+  font-size: 10px;
+}
