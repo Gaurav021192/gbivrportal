@@ -1,6 +1,6 @@
 $('.account-btn').click(function(e) {
     e.preventDefault();
-    if(true) {
+    if(showValidate()) {
         $('.accountTab').addClass('d-none');
         $('.planTab').removeClass('d-none');
         $('.plan').addClass('active tab-active');
