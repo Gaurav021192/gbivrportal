@@ -8,6 +8,22 @@ $(".toggle-password").click(function() {
     }
 });
 
+$('.create-account').click(function(e) {
+    e.preventDefault();
+    $('.cover-spin').show();
+    setTimeout(function() {
+        window.location.href = 'signup.html';
+    }, 2000);
+});
+
+$(".input-effect input").focusout(function(){
+    if($(this).val() != ""){
+        $(this).addClass("has-content");
+    }else{
+        $(this).removeClass("has-content");
+    }
+});
+
 var inputs = $(".validate-input .input");
 
 $(".validate-form").on("submit", function() {

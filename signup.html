@@ -3,7 +3,7 @@
     <head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Voice Recorder</title>
+        <title>Portal Sign Up</title>
 
         <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" />
@@ -25,16 +25,16 @@
                             <div class="row">
                                 <div class="col-12 mt-3">
                                     <div class="field validate-input">
-                                        <input type="text" class="fname" name="fname" id="fname" placeholder="John">
+                                        <input type="text" class="fname" name="fname" maxlength="20" id="fname" placeholder="John">
                                         <label for="fname">First Name</label>
                                         <span class="focus-border"></span>
                                         <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none fname-error"></span>
                                     </div>
-                                    <p class="error-content mt-d-20 d-none fname-error">First Name is required</p>
+                                    <p class="error-content mt-d-20 d-none fname-error fname-e-content">First Name is required</p>
                                 </div>
                                 <div class="col-12">
                                     <div class="field validate-input">
-                                        <input type="text" class="lname" name="lname" id="lname" placeholder="Doe">
+                                        <input type="text" class="lname" name="lname" maxlength="20" id="lname" placeholder="Doe">
                                         <label for="lname">Last Name</label>
                                         <span class="focus-border"></span>
                                         <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none lname-error"></span>
@@ -43,12 +43,12 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="field validate-input">
-                                        <input type="text" class="uname" name="uname" id="uname" placeholder="johndoe">
+                                        <input type="text" class="uname" name="uname" id="uname" maxlength="20" placeholder="johndoe [AlphaNumeric Characters only]">
                                         <label for="uname">UserName</label>
                                         <span class="focus-border"></span>
                                         <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none uname-error"></span>
                                     </div>
-                                    <p class="error-content mt-d-20 d-none uname-error">UserName is required</p>
+                                    <p class="error-content mt-d-20 d-none uname-error uname-e-content">UserName is required</p>
                                 </div>
                                 <div class="col-12">
                                     <div class="field validate-input">
@@ -61,12 +61,12 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="field validate-input">
-                                        <input type="text" class="phone" name="phone" id="phone" placeholder="9645XXXXXX">
+                                        <input type="text" class="phone" name="phone" maxlength="10" id="phone" placeholder="9645XXXXXX [10-digit]">
                                         <label for="phone">Phone Number</label>
                                         <span class="focus-border"></span>
                                         <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none phone-error"></span>
                                     </div>
-                                    <p class="error-content mt-d-20 d-none phone-error">Phone Number is required</p>
+                                    <p class="error-content mt-d-20 d-none phone-error phone-e-content">Phone Number is required</p>
                                 </div>
                                 <div class="col-12">
                                     <div class="field validate-input">
@@ -85,7 +85,7 @@
                                         <span toggle="#password" class="far fa-lg fa-eye-slash field-icon toggle-password"></span>
                                         <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none pass-error"></span>
                                     </div>
-                                    <p class="error-content mt-d-20 d-none pass-error">Password is required</p>
+                                    <p class="error-content mt-d-20 d-none pass-error pass-e-content">Password is required</p>
                                 </div>
                                 <div class="col-12">
                                     <div class="field validate-input" data-validate="Password is required">
@@ -95,7 +95,7 @@
                                         <span toggle="#cpassword" class="far fa-lg fa-eye-slash field-icon toggle-con-password"></span>
                                         <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none cpass-error"></span>
                                     </div>
-                                    <p class="error-content mt-d-20 d-none cpass-error">Password is required</p>
+                                    <p class="error-content mt-d-20 d-none cpass-error cpass-e-content">Confirm Password is required</p>
                                 </div>
                             </div>
                             
@@ -107,14 +107,15 @@
                             <h1>Choose Plan</h1>
                             <div class="row">
                                 <div class="col-12 mt-4">
-                                    <div class="custom-select">
+                                    <div class="custom-select user-type" name="user-type">
                                         <select>
-                                            <option value="0">User Type</option>
+                                            <option value="">User Type</option>
                                             <option value="1">Admin</option>
                                             <option value="2">Contractor</option>
                                             <option value="3">Caller</option>
                                         </select>
                                     </div>
+                                    <p class="error-content mb-0 d-none utype-error utype-e-content">Confirm Password is required</p>
                                 </div>
                                 <div class="col-12 mt-3">
                                     <div class="field validate-input">
@@ -124,14 +125,15 @@
                                     </div>
                                 </div>
                                 <div class="col-12 mt-3">
-                                    <div class="custom-select">
+                                    <div class="custom-select service-plan" name="service-plan">
                                         <select>
-                                            <option value="0">Service Plan</option>
+                                            <option value="">Service Plan</option>
                                             <option value="1">Silver</option>
                                             <option value="2">Gold</option>
                                             <option value="3">Platinum</option>
                                         </select>
                                     </div>
+                                    <p class="error-content mb-0 d-none cplan-error cplan-e-content">Confirm Password is required</p>
                                 </div>
                             </div>
                             <p class="mb-0 mt-4">Account Type</p>
@@ -188,14 +190,14 @@
                                 </div>
                             </div>
                             <div class="text-center mt-3">
-                                <button id="signin" class="signup-btn"><p>Submit</p></button>
+                                <button id="signin" class="signup-btn" type="reset"><p>Submit</p></button>
                             </div>
                         </div>                        
                     </div>
 				</form>
 
 				<div class="login100-more">
-					<div class="login-bg-img align-center"><img src="./bg-img/bg-image.svg" class="img-fluid"/></div>
+					<div class="login-bg-img align-center"><img src="./bg-img/bg-image.svg" class="content-img img-fluid"/></div>
 					<p class="login-desc align-center">Smart IVR service configured through a Virtual Number interacts with customers and routes calls to appropriate department.</p>
 					<div class="footer">
                         <div class="row m-0">
@@ -236,7 +238,8 @@
                     </div>
 				</div>
 			</div>
-		</div>
+        </div>
+        <div class="cover-spin"></div>
 		
 		<script type="text/javascript" src="./js/signup.js"></script>
     </body>
