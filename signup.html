@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="field validate-input">
-                                        <input type="text" class="uname" name="uname" id="uname" maxlength="20" placeholder="johndoe [AlphaNumeric Characters only]">
+                                        <input type="text" class="uname" name="uname" id="uname" maxlength="20" placeholder="johndoe [Alphanumeric characters]">
                                         <label for="uname">UserName</label>
                                         <span class="focus-border"></span>
                                         <span class="fa fa-lg fa-exclamation-circle field-icon error-icon d-none uname-error"></span>
@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="field validate-input" data-validate="Password is required">
-                                        <input type="password" class="password" name="password" id="password" placeholder="* * * * * *">
+                                        <input type="password" class="password" name="password" maxlength="15" id="password" placeholder="At least 8 to 15 characters">
                                         <label for="password">Password</label>
                                         <span class="focus-border"></span>
                                         <span toggle="#password" class="far fa-lg fa-eye-slash field-icon toggle-password"></span>
@@ -89,7 +89,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="field validate-input" data-validate="Password is required">
-                                        <input type="password" class="cpassword" name="cpassword" id="cpassword" placeholder="* * * * * *">
+                                        <input type="password" class="cpassword" name="cpassword" maxlength="15" id="cpassword" placeholder="* * * * * * *">
                                         <label for="cpassword">Confirm Password</label>
                                         <span class="focus-border"></span>
                                         <span toggle="#cpassword" class="far fa-lg fa-eye-slash field-icon toggle-con-password"></span>
@@ -100,7 +100,7 @@
                             </div>
                             
                             <div class="text-center">
-                                <button id="signin" class="account-btn"><p>Create an account</p></button>
+                                <button id="signin" class="button account-btn"><p>Create an account</p></button>
                             </div>
                         </div>
                         <div class="planTab d-none">
@@ -190,7 +190,7 @@
                                 </div>
                             </div>
                             <div class="text-center mt-3">
-                                <button id="signin" class="signup-btn" type="reset"><p>Submit</p></button>
+                                <button id="signin" class="button signup-btn" type="reset"><p>Submit</p></button>
                             </div>
                         </div>                        
                     </div>
@@ -201,35 +201,35 @@
 					<p class="login-desc align-center">Smart IVR service configured through a Virtual Number interacts with customers and routes calls to appropriate department.</p>
 					<div class="footer">
                         <div class="row m-0">
-                            <div class="col-4">
+                            <div class="col-4 foot-tiles">
                                 <p class="foot-content-header">Best In Class Connectivity</p>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-4 col-lg-3 pr-0">
                                         <img src="./bg-img/connection.svg" alt="connection" class="img-fluid login-icons">
                                     </div>
-                                    <div class="col-8 pl-0">
+                                    <div class="col-8 col-lg-9 pl-0">
                                         <p class="f-img-content">Ensuring the lowest latency for the priority traffic allowing you to reach your customers in shortest time</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 right-foot">
+                            <div class="col-4 right-foot foot-tiles">
                                 <p class="foot-content-header">No Setup Fees</p>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-4 col-lg-3 pr-0">
                                         <img src="./bg-img/money.svg" alt="money" class="img-fluid login-icons">
                                     </div>
-                                    <div class="col-8 pl-0">
+                                    <div class="col-8 col-lg-9 pl-0">
                                         <p class="f-img-content">Enjoy 100% free setup for Voice and Messaging management solutions</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 right-foot">
+                            <div class="col-4 right-foot foot-tiles">
                                 <p class="foot-content-header">Ease Of Use</p>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-4 col-lg-3 pr-0">
                                         <img src="./bg-img/usability.svg" alt="usability" class="img-fluid login-icons">
                                     </div>
-                                    <div class="col-8 pl-0">
+                                    <div class="col-8 col-lg-9 pl-0">
                                         <p class="f-img-content">Explore user-friendly web interface, incorporating developer friendly Voice API and Bulk SMS</p>
                                     </div>
                                 </div>

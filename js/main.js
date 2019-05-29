@@ -13,7 +13,7 @@ $('.create-account').click(function(e) {
     $('.cover-spin').show();
     setTimeout(function() {
         window.location.href = 'signup.html';
-    }, 2000);
+    }, 1000);
 });
 
 $(".input-effect input").focusout(function(){
@@ -23,6 +23,42 @@ $(".input-effect input").focusout(function(){
         $(this).removeClass("has-content");
     }
 });
+
+$('.cont-btn').click(function() {
+    $('.cover-spin').show();
+    setTimeout(function() {
+        window.location.href = 'login.html';
+    }, 700);
+});
+
+$('.pass-btn').click(function() {
+    if(resetEmailValidate()) {
+        $('.cover-spin').show();
+        setTimeout(function() {
+            $('.confirm-msg').removeClass('d-none');
+            $('#email2').val('');
+            $('.cont-btn').removeClass('d-none');
+            $('.pass-btn').addClass('d-none');
+            $('.cover-spin').hide();
+        }, 500);
+        
+    }
+});
+
+$('#email2').focus(function() {
+    $('.reset-error').addClass('d-none');
+    $('.mail-set').removeClass('d-none');
+});
+
+function resetEmailValidate() {
+    var resetCheck = true;
+    if($('#email2').val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+        $('.reset-error').removeClass('d-none');
+        $('.mail-set').addClass('d-none');
+        resetCheck = false;
+    }
+    return resetCheck;
+}
 
 var inputs = $(".validate-input .input");
 

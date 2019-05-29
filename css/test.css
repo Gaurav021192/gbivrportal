@@ -80,21 +80,21 @@ h1 {
   margin-top: 5%;
 }
 
-@media (min-width:1025px) and (max-width: 1367px) {
+/* @media (min-width:1025px) and (max-width: 1367px) {
   .f-img-content {
     font-size: 14px !important;
   }
   .foot-content-header {
     font-size: 14px !important;
   }
-}
+} */
 
 @media (max-width: 1024px) {
   .f-img-content {
-    font-size: 9px !important;
+    font-size: 8px !important;
   }
   .foot-content-header {
-    font-size: 10px !important;
+    font-size: 9px !important;
   }
 }
 
@@ -108,6 +108,7 @@ h1 {
 @media (max-width: 1024px) {
   .login-desc {
     margin: 10px;
+    font-size: 18px;
   }
 }
 
@@ -116,7 +117,6 @@ h1 {
   bottom: 0;
   width: 100%;
   padding: 10px 0;
-  margin-top: 35px;
   background-color: #1e234d;
 }
 
@@ -125,21 +125,19 @@ h1 {
 }
 
 .foot-content-header {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   color: #fff;
+  margin-bottom: 10px !important;
 }
 
-@media (min-width:1025px) and (max-width: 1367px) {
-  .footer {
-    margin-top: 80px;
-  }
+.foot-tiles {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
-@media (max-width: 1024px) {
-  .footer {
-    margin-top: 150px;
-  }
+.foot-tiles:hover {
+  opacity: 1;
 }
 
 .f-div {
@@ -195,13 +193,14 @@ h1 {
 
 .f-img-content {
   font-family: 'Segoe UI Light';
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.2;
   color: #fff;
 }
 
 .login-icons {
   filter: invert(0.7);
+  max-width: 60% !important;
 }
 
 @media (max-width: 992px) {
@@ -260,7 +259,7 @@ h1 {
 label {
   font-family: 'Segoe UI Light';
   font-size: 10px;
-  color: #dadedf;
+  color: #b0b3b4;
   transition: all 0.2s;
   touch-action: manipulation;
 }
@@ -273,7 +272,7 @@ input {
   touch-action: manipulation;
   caret-color: #2d3645;
   border: 0;
-  border-bottom: 1px solid #dadedf;
+  border-bottom: 1px solid #b0b3b4;
   -webkit-appearance: none;
   padding: 2px;
   letter-spacing: 1px;
@@ -350,7 +349,7 @@ input:focus + label {
 
 
 .field-icon {
-  color: #dadedf;
+  color: #b0b3b4;
   position: absolute;
   align-self: flex-end;
   padding-right: 10px;
@@ -448,8 +447,8 @@ input:focus ~ .field-icon {
 }
 
 .container .checkmark:after {
-  left: 7px;
-  top: 2px;
+  left: 5px;
+  top: 0;
   width: 7px;
   height: 14px;
   border: solid #fff;
@@ -464,7 +463,7 @@ input:focus ~ .field-icon {
   color: #2f3458;
 }
 
-button {
+.button {
   border-color: transparent;
   border-radius: 30px;
   width:100%;
@@ -474,11 +473,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   background-color: #1e234d;
 }
 
-button:focus {
+.button:focus {
   outline: none;
 }
 
@@ -487,7 +486,7 @@ a:hover {
   color: #2196F3;
 }
 
-button p {
+.button p {
   font-family: 'Segoe UI Light';
   padding-top:5px;
   font-size: 18px;
@@ -510,7 +509,7 @@ button p {
   width: 50%;
   display: flex;
   padding: 15px 60px;
-  background-color: #DADEDF;
+  background-color: #dadedf;
   color: #BFBFC1;
   font-family: 'Segoe UI Light';
   font-size: 15px;
@@ -549,8 +548,8 @@ button p {
   padding: 0;
   border: 0;
   border-radius: 0;
-  border-bottom: 1px solid #dadedf;
-  color: #DADEDF;
+  border-bottom: 1px solid #b0b3b4;
+  color: #b0b3b4;
   background: none;
 }
 
@@ -564,10 +563,6 @@ button p {
 
 .custom-select select {
   display: none; /*hide original SELECT element:*/
-}
-
-.select-selected {
-  /* background-color: DodgerBlue; */
 }
 
 /*style the arrow inside the select element:*/
@@ -586,7 +581,7 @@ button p {
   content: "";
   top: 14px;
   right: 25px;  
-  color: #DADEDF;
+  color: #b0b3b4;
 }
 
 /*point the arrow upwards when the select box is open (active):*/
@@ -604,10 +599,14 @@ button p {
 
 /*style the items (options), including the selected item:*/
 .select-items div,.select-selected {
-  color: #dadedf;
+  color: #1e234d;
   padding: 5px;
   cursor: pointer;
   user-select: none;
+}
+
+.select-selected {
+  color: #b0b3b4 !important;
 }
 
 /*style items (options):*/
@@ -618,7 +617,7 @@ button p {
   left: 0;
   right: 0;
   z-index: 99;
-  box-shadow: 5px 5px 5px #dadedf;
+  box-shadow: 5px 5px 5px #b0b3b4;
 }
 
 /*hide the items when the select box is closed:*/
@@ -628,6 +627,7 @@ button p {
 
 .select-items div:hover, .same-as-selected {
   background-color: #1e234d;
+  color: #b0b3b4 !important;
 }
 
 .plan-container input{
@@ -636,11 +636,6 @@ button p {
      -moz-appearance:none;
           appearance:none;
 }
-
-/* .visa{width:100px;
-  height:100px;
-}
-.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);} */
 
 .plan-container input:active +.account-plan{opacity: .9;}
 .plan-container input:checked +.account-plan{
@@ -654,10 +649,11 @@ button p {
   cursor:pointer;
   width:100%;
   height:80px;
-  border: 1px solid #dadedf;
+  border: 1px solid #b0b3b4;
+  margin-bottom: 0;
 }
 .account-plan:hover{
-  box-shadow: 2px 2px 5px #dadedf;
+  box-shadow: 2px 2px 5px #b0b3b4;
 }
 
 .plan-content {
@@ -694,7 +690,7 @@ button p {
 }
 
 .vline {
-  border-left: 1px solid #dadedf;
+  border-left: 1px solid #b0b3b4;
   height: 100%;
 }
 
@@ -743,4 +739,44 @@ to {transform:rotate(360deg);}
   border-radius:50%;
   -webkit-animation: spin .8s linear infinite;
   animation: spin .8s linear infinite;
+}
+
+.modal-header {
+  border-bottom: 0;
+}
+
+.modal-title {
+  font-size: 25px;
+  font-family: 'Segoe UI Light';
+  color: #1e234d;
+}
+
+.modal-body {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.modal-footer {
+  border-top: 0;
+  justify-content: center;
+}
+
+.pass-btn, .cont-btn {
+  width: 50%;
+  border-radius: 30px;
+  font-family: 'Segoe UI Light'
+}
+
+/* .mail-set {
+  font-size: 25px;
+  top: 25px;
+} */
+
+.confirm-msg {
+  color: #6ECD01;
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: none;
 }

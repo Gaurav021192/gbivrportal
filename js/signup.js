@@ -1,6 +1,6 @@
 $('.account-btn').click(function(e) {
     e.preventDefault();
-    if(showValidate()) {
+    if(true) {
         $('.accountTab').addClass('d-none');
         $('.planTab').removeClass('d-none');
         $('.plan').addClass('active tab-active');
@@ -12,7 +12,7 @@ $('.signup-btn').click(function(e) {
     $('.cover-spin').show();
     setTimeout(function() {
         window.location.href = 'login.html';
-    }, 3000);
+    }, 1000);
 });
 
 $(".toggle-password").click(function() {
@@ -90,11 +90,11 @@ function showValidate() {
         validate = false;
     }
 
-    // if($('.cpassword').val().trim() == '') {
-    //     $(".toggle-con-password").addClass("d-none");
-    //     $(".cpass-error").removeClass("d-none");
-    //     validate = false;
-    // }
+    if($('.cpassword').val().trim() == '') {
+        $(".toggle-con-password").addClass("d-none");
+        $(".cpass-error").removeClass("d-none");
+        validate = false;
+    }
 
     if($('.cpassword').val() != $('.password').val()) {
         $(".toggle-con-password").addClass("d-none");
