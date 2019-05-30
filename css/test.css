@@ -764,7 +764,9 @@ to {transform:rotate(360deg);}
 .pass-btn, .cont-btn {
   width: 50%;
   border-radius: 30px;
-  font-family: 'Segoe UI Light'
+  font-family: 'Segoe UI Light';
+  color: #fff;
+  font-size: 18px;
 }
 
 /* .mail-set {

@@ -39,6 +39,7 @@ $('.pass-btn').click(function() {
             $('#email2').val('');
             $('.cont-btn').removeClass('d-none');
             $('.pass-btn').addClass('d-none');
+            $('.close').addClass('d-none');
             $('.cover-spin').hide();
         }, 500);
         
