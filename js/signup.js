@@ -7,12 +7,12 @@ $('.account-btn').click(function(e) {
     }
 });
 
-$('.signup-btn').click(function(e) {
+$('#goToLogin').click(function(e) {
     e.preventDefault();
     $('.cover-spin').show();
     setTimeout(function() {
         window.location.href = 'login.html';
-    }, 1000);
+    }, 500);
 });
 
 $(".toggle-password").click(function() {
@@ -60,14 +60,7 @@ function showValidate() {
         $('.lname-error').removeClass('d-none');
         validate = false;
     }
-    // if($('.uname').val().trim() == '') {
-    //     $('.uname-error').removeClass('d-none');
-    //     validate = false;
-    // }
-    // if($('.phone').val().trim() == '') {
-    //     $('.phone-error').removeClass('d-none');
-    //     validate = false;
-    // }
+    
     if($('.phone').val().length < 10 || !numberExp.test($('.phone').val())) {
         $('.phone-error').removeClass('d-none');
         $('.phone-e-content').html('Valid Phone Number is required, must contain Numeric Value.');
@@ -78,11 +71,7 @@ function showValidate() {
         $('.comp-error').removeClass('d-none');
         validate = false;
     }
-    // if($('.password').val().trim() == '') {
-    //     $(".toggle-password").addClass("d-none");
-    //     $(".pass-error").removeClass("d-none");
-    //     validate = false;
-    // }
+    
     if(!passwordExp.test($('.password').val())) {
         $(".toggle-password").addClass("d-none");
         $(".pass-error").removeClass("d-none");

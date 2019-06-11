@@ -782,3 +782,15 @@ to {transform:rotate(360deg);}
   outline: none;
   box-shadow: none;
 }
+
+.size-50 {
+  font-size: 50px;
+}
+
+.acc-create-bg {
+  background-color: #303459;
+}
+
+.no-border {
+  border: none;
+}

@@ -13,7 +13,7 @@ $('.create-account').click(function(e) {
     $('.cover-spin').show();
     setTimeout(function() {
         window.location.href = 'signup.html';
-    }, 1000);
+    }, 500);
 });
 
 $(".input-effect input").focusout(function(){
@@ -28,7 +28,7 @@ $('.cont-btn').click(function() {
     $('.cover-spin').show();
     setTimeout(function() {
         window.location.href = 'login.html';
-    }, 700);
+    }, 500);
 });
 
 $('.pass-btn').click(function() {
@@ -88,7 +88,7 @@ function validate (inputs) {
         }
     }
     else {
-        if($(inputs).val().trim() == ''){
+        if($(inputs).attr('name') == 'password' && $(inputs).val().trim() == ''){
             return false;
         }
     }
